@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<!-- DOCTYPE: Indica que el documento usa HTML5 -->
+
+<html lang="es">
+<!-- html lang="es": Define que el idioma principal del documento es español -->
+
+<head>
+  <!-- head: Contiene metadatos e información no visible directamente en la página -->
+
+  <meta charset="UTF-8" />
+  <!-- meta charset: Permite usar caracteres especiales como ñ y tildes -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- viewport: Hace que la página se adapte correctamente a dispositivos móviles -->
+
+  <meta name="description" content="Versión final del Clon de YouTube. Solo HTML semántico, con comentarios explicativos y 3 videos integrados." />
+  <!-- description: Descripción usada por buscadores (SEO básico) -->
+
+  <title>YouTube Clone Final - Sin CSS/JS</title>
+  <!-- title: Texto que aparece en la pestaña del navegador -->
+</head>
+
+<body>
+  <!-- body: Contiene todo el contenido visible de la página -->
+
+  <header>
+    <!-- header: Encabezado principal del sitio -->
+
+    <nav aria-label="Navegación principal">
+      <!-- nav: Bloque de navegación principal -->
+
+      <table border="0" width="100%">
+        <!-- table: Usada solo para maquetar sin CSS (enfoque educativo) -->
+
+        <tr>
+          <!-- tr: Fila de la tabla -->
+
+          <td width="20%">
+            <!-- td: Columna izquierda con el logo -->
+
+            <a href="#inicio">
+              <!-- a: Enlace que lleva al inicio de la página -->
+
+              <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"
+                   alt="Inicio YouTube"
+                   width="120" />
+              <!-- img: Muestra el logo de YouTube -->
+            </a>
+          </td>
+
+          <td width="60%" align="center">
+            <!-- Columna central con el buscador -->
+
+            <form action="#inicio" method="get" role="search">
+              <!-- form: Simula el buscador de YouTube -->
+
+              <label for="q">Buscar</label>
+              <!-- label: Etiqueta accesible para el campo de búsqueda -->
+
+              <input id="q"
+                     name="q"
+                     type="search"
+                     placeholder="Buscar video..."
+                     list="videos-ids"
+                     size="40" />
+              <!-- input type="search": Campo de búsqueda -->
+              <!-- list: Conecta el input con el datalist -->
+
+              <datalist id="videos-ids">
+                <!-- datalist: Lista de sugerencias (autocompletado) -->
+
+                <option value="Learn HTML – Full Tutorial for Beginners"></option>
+                <option value="Learn HTML & CSS – Full Course for Beginners"></option>
+                <option value="HTML / CSS Tutorial – Create an Order Summary Component"></option>
+              </datalist>
+
+              <button type="submit">🔍</button>
+              <!-- button: Botón para enviar el formulario -->
+            </form>
+          </td>
+        </tr>
+      </table>
+    </nav>
+
+    <hr />
+    <!-- hr: Línea horizontal para separar visualmente -->
+  </header>
+
+  <main id="inicio">
+    <!-- main: Contenido principal de la página -->
+
+    <table border="0" width="100%" cellpadding="10">
+      <!-- Tabla principal de distribución del contenido -->
+
+      <tr>
+
+        <td width="15%" valign="top">
+          <!-- Columna izquierda: menú lateral -->
+
+          <aside>
+            <!-- aside: Contenido secundario -->
+
+            <nav>
+              <!-- Navegación secundaria -->
+
+              <h3>Explorar</h3>
+              <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#watch-1">Video 1</a></li>
+                <li><a href="#watch-2">Video 2</a></li>
+                <li><a href="#watch-3">Video 3</a></li>
+              </ul>
+            </nav>
+          </aside>
+        </td>
+
+        <td width="55%" valign="top">
+          <!-- Columna central: videos principales -->
+
+          <section aria-label="Videos actuales">
+            <!-- section: Agrupa los videos -->
+
+            <article id="watch-1">
+              <!-- article: Video individual -->
+
+              <h2>1. Learn HTML – Full Tutorial for Beginners</h2>
+
+              <iframe width="100%" height="350"
+                      src="https://www.youtube-nocookie.com/embed/kUMe1FH4CHE?start=1223"
+                      title="Tutorial HTML Parte 1"
+                      frameborder="0"
+                      allowfullscreen>
+              </iframe>
+              <!-- iframe: Inserta un video de YouTube sin cookies -->
+
+              <p><strong>Descripción:</strong> Curso exhaustivo para dominar las bases de la web.</p>
+
+              <details>
+                <!-- details: Contenido desplegable -->
+
+                <summary>Ver más sobre este video</summary>
+                <p>Este video inicia en el segundo 1223 según lo solicitado en el prompt original.</p>
+              </details>
+            </article>
+
+            <hr />
+
+            <article id="watch-2">
+              <h2>2. Learn HTML & CSS – Full Course for Beginners</h2>
+
+              <iframe width="100%" height="350"
+                      src="https://www.youtube-nocookie.com/embed/a_iQb1lnAEQ"
+                      title="Curso HTML y CSS"
+                      frameborder="0"
+                      allowfullscreen>
+              </iframe>
+
+              <p><strong>Descripción:</strong> El paso siguiente para aprender a dar estilos (aunque aquí no los usemos).</p>
+            </article>
+
+            <hr />
+
+            <article id="watch-3">
+              <h2>3. HTML / CSS Tutorial – Create an Order Summary Component</h2>
+
+              <iframe width="100%" height="350"
+                      src="https://www.youtube-nocookie.com/embed/SR5GxoFhIAU"
+                      title="Tutorial Componente"
+                      frameborder="0"
+                      allowfullscreen>
+              </iframe>
+
+              <p><strong>Descripción:</strong> Aplicación práctica de conocimientos estructurales.</p>
+            </article>
+
+          </section>
+        </td>
+
+        <td width="30%" valign="top">
+          <!-- Columna derecha: videos sugeridos -->
+
+          <section id="recomendados">
+            <h3>Sugerencias</h3>
+
+            <ul style="list-style: none; padding: 0;">
+              <!-- Lista sin estilos (simulación de sidebar) -->
+
+              <li>
+                <a href="#watch-1">
+                  <img src="https://i.ytimg.com/vi/kUMe1FH4CHE/hqdefault.jpg"
+                       width="160"
+                       alt="Miniatura Video 1" /><br />
+                  <small>Learn HTML - Tutorial</small>
+                </a>
+              </li>
+
+              <br />
+
+              <li>
+                <a href="#watch-2">
+                  <img src="https://i.ytimg.com/vi/a_iQb1lnAEQ/hqdefault.jpg"
+                       width="160"
+                       alt="Miniatura Video 2" /><br />
+                  <small>Learn HTML & CSS</small>
+                </a>
+              </li>
+
+              <br />
+
+              <li>
+                <a href="#watch-3">
+                  <img src="https://i.ytimg.com/vi/SR5GxoFhIAU/hqdefault.jpg"
+                       width="160"
+                       alt="Miniatura Video 3" /><br />
+                  <small>Order Summary Design</small>
+                </a>
+              </li>
+            </ul>
+          </section>
+        </td>
+
+      </tr>
+    </table>
+  </main>
+
+  <footer>
+    <!-- footer: Pie de página -->
+
+    <hr />
+
+    <center>
+      <!-- center: Centra el contenido (uso educativo, no recomendado en producción) -->
+
+      <p>&copy; 2026 Prototipo de Educación Web. Sin CSS, Sin JS.</p>
+      <p>Modelos utilizados: Gemini 1.5 Pro & ChatGPT 5.2</p>
+    </center>
+  </footer>
+
+</body>
+</html>
