@@ -1,6 +1,6 @@
 # Analisis de Implementacion Estructural - Version Gemini 1.5 Pro
 
-# [youtube clon m2]()
+# [youtube clon m2](https://cdcuellar.github.io/clon_youtube_m2/)
 
 Este documento detalla el desarrollo de la replica de YouTube utilizando exclusivamente estandares de HTML5 semantico, omitiendo cualquier tecnologia de estilos o programacion externa.
 
